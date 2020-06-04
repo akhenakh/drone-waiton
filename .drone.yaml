@@ -1,0 +1,10 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: waiton 
+  image: akhenakh/drone-waiton
+  settings:
+    urls: 
+    - http://www.google.com
