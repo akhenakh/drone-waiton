@@ -6,7 +6,7 @@ steps:
 - name: waiton 
   image: akhenakh/drone-waiton:1.0
   settings:
-    globaltimeout: 2mn 
+    globaltimeout: 2m
     urls:
     - tcp://cache:6379
 
