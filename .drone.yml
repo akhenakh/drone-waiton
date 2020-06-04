@@ -8,3 +8,4 @@ steps:
   settings:
     urls: 
     - http://www.google.com
+    - http://www.yahoo.com
