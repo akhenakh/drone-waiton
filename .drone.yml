@@ -6,7 +6,17 @@ steps:
 - name: waiton 
   image: akhenakh/drone-waiton:1.0
   settings:
-    globaltimeout: 3s
-    urls: 
-    - http://www.google.com
-    - http://httpbin.org/delay/5
+    globaltimeout: 2mn 
+    urls:
+    - tcp://cache:6379
+
+- name: service-ready
+  image: busybox
+  commands:
+  - echo "redis ready"
+  depends_on:
+  - waiton
+
+services:
+- name: cache
+  image: redis
