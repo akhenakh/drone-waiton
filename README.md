@@ -2,18 +2,31 @@
 
 A drone plugin to wait on external hosts to be available, useful for CI when waiting on a service.
 
+In this example pipeline, we spawn a redis service, ask waiton to test for redis avaibility, and then do our work in a task depending on waiton.
+
 ```yaml
 kind: pipeline
 
 steps:
 - name: waiton
-  image: akhenakh/drone-waiton
+  image: akhenakh/drone-waiton:1.0
   settings:
-    globaltimeout: 1m
-    urltimeout: 10s 
+    globaltimeout: 30s
     urls:
-    - http://www.google.com
-    - http://httpbin.org/delay/5
+    - tcp://cache:6379
+
+- name: service-ready
+  image: busybox
+  commands:
+  - echo "redis ready"
+  depends_on:
+  - waiton
+
+services:
+- name: cache
+  image: redis
+  ports:
+  - 6379
 ```
 
 ## Settings
