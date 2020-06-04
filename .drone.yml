@@ -6,6 +6,7 @@ steps:
 - name: waiton 
   image: akhenakh/drone-waiton:1.0
   settings:
+    globaltimeout: 3s
     urls: 
     - http://www.google.com
-    - http://www.yahoo.com
+    - http://httpbin.org/delay/5
