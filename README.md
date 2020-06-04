@@ -108,3 +108,11 @@ steps:
     urls:
     - http://httpbin.org/delay/2
 ```
+
+## Details
+
+The waiton docker image is 4.4MB compressed, based on a distroless image with a simple [Go program](https://github.com/akhenakh/waiton).
+
+For HTTP, waiton is using go-retryablehttp as an HTTP client, using the retries & backoff strategies.
+
+For TCP, waiton is using a simple 1s sleep between retries.
