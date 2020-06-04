@@ -20,3 +20,5 @@ steps:
 services:
 - name: cache
   image: redis
+  ports:
+  - 6379 
