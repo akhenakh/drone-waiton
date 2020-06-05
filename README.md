@@ -1,6 +1,6 @@
 # drone-waiton
 
-A drone plugin to wait on external hosts to be available, useful for CI when waiting on a service.
+A drone plugin to wait for external hosts to be available, useful for CI when waiting on a service.
 
 In this example pipeline, we spawn a redis service, ask waiton to test for redis avaibility, and then do our work in a task depending on waiton.
 
