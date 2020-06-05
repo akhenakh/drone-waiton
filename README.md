@@ -38,7 +38,7 @@ _**type**_ `[]string`
 
 _**default**_ `''`
 
-_**description**_ List of URLs to test, supported schema are `http://` and `tcp://`.
+_**description**_ List of URLs to test, supported schema are `http://`, `https://` and `tcp://`.
 
 _**example**_
 
