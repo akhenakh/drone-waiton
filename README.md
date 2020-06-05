@@ -111,7 +111,7 @@ steps:
 
 ## Details
 
-The waiton docker image is 4.4MB compressed, based on a distroless image with a simple [Go program](https://github.com/akhenakh/waiton).
+The waiton docker image is 4.2MB compressed, based on a distroless image with a simple [Go program](https://github.com/akhenakh/waiton).
 
 For HTTP & TCP, waiton wll retry every 1s as a backoff strategy.
 
