@@ -5,6 +5,7 @@ name: default
 steps:
 - name: waiton 
   image: akhenakh/drone-waiton:1.0
+  pull: always
   settings:
     globaltimeout: 30s 
     urls:
