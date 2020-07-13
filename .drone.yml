@@ -20,13 +20,11 @@ steps:
 
 - name: build_image
   image: akhenakh/drone-kaniko
+  pull: always
   settings:
-    repo: akhenakh/drone-waiton
+    registry: registry.lan.inair.space:5000
+    repo: drone-waiton
     dry_run: true
-    username:
-      from_secret: docker_username
-    password:
-      from_secret: docker_password
 
 services:
 - name: cache
