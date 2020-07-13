@@ -18,6 +18,16 @@ steps:
   depends_on:
   - waiton
 
+- name: build_image
+  image: akhenakh/drone-kaniko
+  settings:
+    repo: akhenakh/drone-waiton
+    dry_run: true
+    username:
+      from_secret: docker_username
+    password:
+      from_secret: docker_password
+
 services:
 - name: cache
   image: redis
