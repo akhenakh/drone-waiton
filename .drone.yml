@@ -24,7 +24,6 @@ steps:
   settings:
     registry: registry.lan.inair.space:5000
     repo: drone-waiton
-    dryrun: true
 
 services:
 - name: cache
