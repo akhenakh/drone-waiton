@@ -25,6 +25,7 @@ steps:
     registry: registry.lan.inair.space:5000
     repo: drone-waiton
     insecure: true
+    verbose: true
 
 services:
 - name: cache
