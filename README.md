@@ -111,7 +111,7 @@ steps:
 
 ### `maxretries`
 
-_**type**_ `string`
+_**type**_ `int`
 
 _**default**_ `'100'`
 
