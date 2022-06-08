@@ -109,6 +109,32 @@ steps:
     - http://httpbin.org/delay/2
 ```
 
+### `maxretries`
+
+_**type**_ `string`
+
+_**default**_ `'100'`
+
+_**description**_ Number of retries before failing. 
+
+_**example**_
+
+```yaml
+# .drone.yml
+
+kind: pipeline
+
+steps:
+- name: waiton
+  image: akhenakh/drone-waiton
+  settings:
+    urltimeout: 1m
+    maxretries: 10
+    urls:
+    - http://httpbin.org/delay/2
+```
+
+
 ## Details
 
 The waiton docker image is 4.2MB compressed, based on a distroless image with a simple [Go program](https://github.com/akhenakh/waiton).
